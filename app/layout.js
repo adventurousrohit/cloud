@@ -1,5 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/common/nav/Navbar";
+import Footer from "@/components/common/nav/Footer";
+import Footertwo from "@/components/common/nav/Footertwo";
+import { AuthProvider } from "./Provider";
+// import { usePathname } from "next/navigation";
+// import { useEffect, useRef } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,12 +23,20 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // const path = usePathname();
+  // const headerRef = useRef(null);
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>
+          <Navbar />
+          {children}
+        </AuthProvider>
+
+        {/* {path === "/" ? <Footer /> : <Footertwo />} */}
       </body>
     </html>
   );

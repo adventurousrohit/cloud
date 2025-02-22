@@ -1,0 +1,150 @@
+/* General Section Styles */
+.section {
+    padding: 60px 0;
+    position: relative;
+  }
+  
+  .bg-pattern-1 {
+    background-color: #f8f9fa;
+  }
+  
+  .bg-gray-100 {
+    background-color: #f5f6f7;
+  }
+  
+  .bg-image1 {
+    position: relative;
+  }
+  
+  .patterns-6,
+  .patterns-5,
+  .patterns-3 {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    opacity: 0.1;
+  }
+  
+  .patterns-6 {
+    top: 0;
+  }
+  
+  .patterns-5 {
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+  
+  .patterns-3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Container and Grid Layout */
+  /* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  } */
+  
+  .row1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  
+  .extra-payment {
+    flex: 1 0 25%;
+    max-width: 25%;
+    padding: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .extra-payment {
+      flex: 1 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .extra-payment {
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  /* Card Styles */
+  .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-body img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-body img:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-body p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Heading Section */
+  .heading-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .heading-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 5px;
+  }
+  
+  .heading-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .heading-title .tx-primary {
+    color: #007bff;
+  }
+  
+  .heading-description {
+    font-size: 16px;
+    color: #6c757d;
+  }
+  
+  /* Payment Options Image */
+  .payment-options {
+    max-width: 100px;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto 10px;
+  }
+  
+  .dark-invert {
+    /* filter: invert(1); */
+    transition: filter 0.3s ease;
+  }
+  
+  .dark-invert:hover {
+    filter: none;
+  }
+  
